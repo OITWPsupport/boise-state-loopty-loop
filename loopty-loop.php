@@ -2,7 +2,7 @@
 /*
 Plugin Name: Boise State Loopty Loop
 Description: Loopty Loop Plugin
-Version: 1.0.1
+Version: 1.0.2
 Author: Matt Berg, David Lentz
  */
 
