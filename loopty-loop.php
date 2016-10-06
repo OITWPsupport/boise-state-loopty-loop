@@ -34,7 +34,7 @@ add_shortcode('loopty_loop_title', function () {
 add_shortcode('loopty_loop_content', function ($params) {
     $content = get_the_content();
     if (isset($params['limit']) && strlen($content) > $params['limit']) {
-        $readMoreText = isset($params['link_text']) ? $params['link_text'] : 'Read more';
+        $readMoreText = isset($params['link_text']) ? $params['link_text'] : 'Read more <em>' . get_the_title() . '</em>';
         $link = '<a href="' . get_permalink() . '">' . $readMoreText . '</a>';
         // Get full words, approximating limit
         $content = explode("\n", wordwrap($content, $params['limit'], "\n"))[0] . "&hellip; {$link}";
