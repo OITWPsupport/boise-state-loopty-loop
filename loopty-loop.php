@@ -1,10 +1,19 @@
 <?php
 /*
-Plugin Name: Loopty Loop
+Plugin Name: Boise State Loopty Loop
 Description: Loopty Loop Plugin
-Version: 1.0.0
-Author: Matt Berg, Student Affairs Web
+Version: 1.0.1
+Author: Matt Berg, David Lentz
  */
+
+defined( 'ABSPATH' ) or die( 'No hackers' );
+if( ! class_exists( 'Boise_State_Loopty_Updater' ) ){
+	include_once( plugin_dir_path( __FILE__ ) . 'updater.php' );
+}
+$updater = new Boise_State_Plugin_Updater( __FILE__ );
+$updater->set_username( 'OITWPsupport' );
+$updater->set_repository( 'boise-state-loopty-loop' );
+$updater->initialize();
 
 add_shortcode('loopty_loop', function($params, $content){
     $query = new WP_Query([
