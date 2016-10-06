@@ -1,7 +1,7 @@
 === Boise State Loopty Loop ===
 Contributors: Matt Berg, David M. Lentz
 Requires at least: 4.4.2
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 Tested up to: 4.6.1
 
 Creates a loop that lets you display posts.
